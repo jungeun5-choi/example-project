@@ -22,10 +22,19 @@ repositories {
 }
 
 dependencies {
+    // spring boot
     implementation 'org.springframework.boot:spring-boot-starter'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    // lombok
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    // redis
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    // modelmapper
+    implementation 'org.modelmapper:modelmapper:2.4.2'
+    // serialize
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.13.3'
 }
 
 tasks.named('test') {
