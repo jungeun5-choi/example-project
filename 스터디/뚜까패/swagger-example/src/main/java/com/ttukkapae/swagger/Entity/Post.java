@@ -1,16 +1,14 @@
 package com.ttukkapae.swagger.Entity;
 
+import com.ttukkapae.swagger.dto.PostDto;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Entity
 @Getter
-@Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Table(name = "post")
 public class Post {
     @Id
@@ -22,4 +20,15 @@ public class Post {
     private String title;
     @Column(nullable = false)
     private String content;
+
+    public Post(PostDto requestDto) {
+        this.username = requestDto.getUsername();
+        this.title = requestDto.getTitle();
+        this.content = requestDto.getContent();
+    }
+
+    public void update(PostDto requestDto) {
+        this.title = requestDto.getTitle();
+        this.content = requestDto.getContent();
+    }
 }

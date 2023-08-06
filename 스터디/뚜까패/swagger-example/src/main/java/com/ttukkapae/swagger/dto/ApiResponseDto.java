@@ -5,11 +5,11 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class ApiExampleResponseDto {
+public class ApiResponseDto {
     private String msg;
     private Integer statusCode;
 
-    public ApiExampleResponseDto(String msg, Integer statusCode) {
+    public ApiResponseDto(String msg, Integer statusCode) {
         this.msg = msg;
         this.statusCode = statusCode;
     }

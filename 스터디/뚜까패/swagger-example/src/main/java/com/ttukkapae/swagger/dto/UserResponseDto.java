@@ -6,11 +6,11 @@ import lombok.NoArgsConstructor;
 
 @Getter
 @NoArgsConstructor
-public class UserExampleResponseDto {
+public class UserResponseDto {
     private Long id;
     private String username;
 
-    public UserExampleResponseDto(User user) {
+    public UserResponseDto(User user) {
         this.id = user.getId();
         this.username = user.getUsername();
     }
